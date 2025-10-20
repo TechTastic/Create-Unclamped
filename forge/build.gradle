@@ -73,8 +73,8 @@ curseforge {
         changelog = rootProject.file("changelog.md")
         releaseType = 'release'
         addGameVersion '1.20.1'
-        addGameVersion 'forge'
-        addGameVersion 'neoforge'
+        addGameVersion 'Forge'
+        addGameVersion 'NeoForge'
 
         relations {
             requiredDependency 'create'
@@ -88,4 +88,9 @@ curseforge {
 
 modrinth {
     loaders = ['forge','neoforge']
+    versionNumber = "$mod_version-${create_version.split('-')[0]}"
+    versionName = "Create: Unclamped $mod_version for Create ${create_version.split('-')[0]}"
+    dependencies {
+        required.version 'create', "$minecraft_version-${create_version.split('-')[0]}"
+    }
 }

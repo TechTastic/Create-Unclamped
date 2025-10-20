@@ -88,12 +88,7 @@ subprojects {
         projectId = 'kfKiyEXs'
         changelog = rootProject.file("changelog.md").text
         versionType = 'release'
-        versionNumber = "$mod_version-${create_version.split('-')[0]}"
-        versionName = "Create: Unclamped $mod_version for Create ${create_version.split('-')[0]}"
         uploadFile = remapJar
         gameVersions = ['1.20.1']
-        dependencies {
-            required.version 'create', "$minecraft_version-${create_version.split('-')[0]}"
-        }
     }
 }
