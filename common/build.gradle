@@ -17,6 +17,8 @@ repositories {
         url = "https://jitpack.io/"
         content { includeGroupAndSubgroups("com.github") }
     }
+
+    //maven { url = "https://maven.createmod.net" }
 }
 
 dependencies {
@@ -26,4 +28,5 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
     modCompileOnly("com.simibubi.create:create-fabric-$minecraft_version:$create_version")
+    //modCompileOnly("com.simibubi.create:create-$minecraft_version:6.0.6-150:slim") { transitive = false }
 }
