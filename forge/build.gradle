@@ -84,16 +84,16 @@ curseforge {
         }
 
         mainArtifact(jar) {
-            displayName = "Create: Unclamped $mod_version for Create ${create_version.split('-')[0]}"
+            displayName = "Create: Unclamped - Forge - $mod_version"
         }
     }
 }
 
 modrinth {
     loaders = ['forge','neoforge']
-    versionNumber = "$mod_version-${create_version.split('-')[0]}"
-    versionName = "Create: Unclamped $mod_version for Create ${create_version.split('-')[0]}"
+    versionNumber = "$mod_version"
+    versionName = "Create: Unclamped - Forge - $mod_version"
     dependencies {
-        required.version 'create', "$minecraft_version-${create_version.split('-')[0]}"
+        required.project 'create'
     }
 }

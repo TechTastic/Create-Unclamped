@@ -72,8 +72,6 @@ remapJar {
     inputFile.set shadowJar.archiveFile
 }
 
-String[] cv = create_version.split('-')
-
 curseforge {
     apiKey = System.getenv("CURSEFORGE_TOKEN") == null ? '' : System.getenv("CURSEFORGE_TOKEN")
     project {
@@ -89,16 +87,16 @@ curseforge {
         }
 
         mainArtifact(jar) {
-            displayName = "Create: Unclamped $mod_version for Create ${cv[0]}.${cv[1]}"
+            displayName = "Create: Unclamped - Fabric - $mod_version"
         }
     }
 }
 
 modrinth {
     loaders = ['fabric']
-    versionNumber = "$mod_version-${cv[0]}.${cv[1]}"
-    versionName = "Create: Unclamped $mod_version for Create ${cv[0]}.${cv[1]}"
+    versionNumber = "$mod_version"
+    versionName = "Create: Unclamped - Fabric - $mod_version"
     dependencies {
-        required.version 'create-fabric', "$create_version"
+        required.project 'create-fabric'
     }
 }
