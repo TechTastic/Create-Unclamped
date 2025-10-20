@@ -39,11 +39,6 @@ subprojects {
 
     loom {
         silentMojangMappingsLicense()
-        /*runs {
-            client {
-                vmArgs '-Dmixin.debug.export=true'
-            }
-        }*/
     }
 
     dependencies {
