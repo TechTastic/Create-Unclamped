@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "io.github.techtastic.unclamped.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "MixinArmBlockEntity",
+    "MixinCreativeMotorBlockEntity",
+    "MixinKineticScrollValueBehaviour"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
