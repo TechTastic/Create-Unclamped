@@ -25,19 +25,8 @@ configurations {
 }
 
 repositories {
-    maven {
-        name = 'ModMaven'
-        url  = 'https://modmaven.dev/'
-    }
-
-    maven { url = "https://mvn.devos.one/releases" } // Porting Lib releases
-    maven { url = "https://mvn.devos.one/snapshots" } // Create and several dependencies
-    maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
-    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven" } // Forge Config API Port
-
-    maven { // Fabric ASM for Porting Lib
-        url = "https://jitpack.io/"
-        content { includeGroupAndSubgroups("com.github") }
+    flatDir {
+        dir 'libs'
     }
 }
 
@@ -50,9 +39,8 @@ dependencies {
     common(project(path: ':common', configuration: 'namedElements')) { transitive = false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 
-    modImplementation("com.simibubi.create:create-fabric-$minecraft_version:$create_version")
-
-    include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.5.0")))
+    // create-fabric-1.20.1-6.0.7.0+mc1.20.1-local
+    //implementation "blank:create-fabric-1.20.1:6.0.7.0+mc1.20.1-local"
 }
 
 processResources {
@@ -79,11 +67,11 @@ curseforge {
         changelogType = 'markdown'
         changelog = rootProject.file("changelog.md")
         releaseType = 'release'
-        addGameVersion '1.20.1'
+        addGameVersion '1.21.1'
         addGameVersion 'Fabric'
 
         relations {
-            requiredDependency 'create'
+            requiredDependency 'create-fabric'
         }
 
         mainArtifact(jar) {

@@ -1,0 +1,38 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "unclamped"
+version = "${version}"
+displayName = "Create: Unclamped"
+authors = "TechTastic"
+description = '''
+Removes the various clamps on speed!
+'''
+#logoFile = ""
+
+[[dependencies.unclamped]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.unclamped]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.unclamped]]
+modId = "create"
+mandatory = true
+versionRange = "[0.5.1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "unclamped.mixins.json"
