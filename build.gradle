@@ -34,7 +34,9 @@ subprojects {
         // See https://docs.gradle.org/current/userguide/declaring_repositories.html
         // for more information about repositories.
 
-        maven { url = "https://maven.tterrag.com/" }
+        maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+        maven { url = "https://maven.ithundxr.dev/mirror" } // Registrate
+        maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
     }
 
     loom {

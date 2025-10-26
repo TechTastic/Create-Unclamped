@@ -25,11 +25,6 @@ configurations {
 }
 
 repositories {
-    maven {
-        name = 'ModMaven'
-        url  = 'https://modmaven.dev/'
-    }
-
     maven { url = "https://mvn.devos.one/releases" } // Porting Lib releases
     maven { url = "https://mvn.devos.one/snapshots" } // Create and several dependencies
     maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
