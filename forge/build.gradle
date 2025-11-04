@@ -78,7 +78,7 @@ curseforge {
             requiredDependency 'create'
         }
 
-        mainArtifact(jar) {
+        mainArtifact(remapJar) {
             displayName = "Create: Unclamped - Forge - $mod_version"
         }
     }

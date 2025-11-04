@@ -81,7 +81,7 @@ curseforge {
             requiredDependency 'create'
         }
 
-        mainArtifact(jar) {
+        mainArtifact(remapJar) {
             displayName = "Create: Unclamped - Fabric - $mod_version"
         }
     }
